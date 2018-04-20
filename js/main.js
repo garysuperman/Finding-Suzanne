@@ -1247,7 +1247,6 @@ function spawnEvent(){
 	if(z < 0 && spawned[0] === false){
 		spawned[0] = true;
 		spawnRedMonkey(0, 35, -100)
-        enemies['model'].push(null);
 	}
 	else if(z < -200 && spawned[1] === false){
         if(doorSound.isPlaying)
@@ -1258,7 +1257,6 @@ function spawnEvent(){
         scene.add(lights[0])
         scene.remove(lights[1])
         scene.remove(lights[2])
-        enemies['model'].splice(0, 1)  
         spawnRedMonkey(85, 50, -150)
 		spawnRedMonkey(85, 30, -200)
 		spawnRedMonkey(85, 40, -250)
