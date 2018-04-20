@@ -1405,7 +1405,7 @@ function spawnEvent(){
 		trapWalls[2].position.y -= 0.5; //lava room entrance
         //trapWalls[3].position.y -= 0.5; //boss room exit
 	}
-    if(spawned[1] === true && enemies['model'].length == 0 && spawned[2] === false && trapWalls[2].position.y === 45/2 - 1){
+    if(spawned[1] === true && enemies['model'].length == 0 && spawned[2] === false && trapWalls[2].position.y === 45/2 - 5){
         createFirstAid(5, 2.5, 5, 0, 10, -225)
 		if(doorSound.isPlaying)
             doorSound.stop()
