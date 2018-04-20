@@ -1247,6 +1247,7 @@ function spawnEvent(){
 	if(z < 0 && spawned[0] === false){
 		spawned[0] = true;
 		spawnRedMonkey(0, 35, -100)
+        enemies['model'].push(null);
 	}
 	else if(z < -200 && spawned[1] === false){
         if(doorSound.isPlaying)
@@ -1257,6 +1258,7 @@ function spawnEvent(){
         scene.add(lights[0])
         scene.remove(lights[1])
         scene.remove(lights[2])
+        enemies['model'].splice(0, 1)  
         spawnRedMonkey(85, 50, -150)
 		spawnRedMonkey(85, 30, -200)
 		spawnRedMonkey(85, 40, -250)
@@ -1405,8 +1407,10 @@ function spawnEvent(){
 		trapWalls[2].position.y -= 0.5; //lava room entrance
         //trapWalls[3].position.y -= 0.5; //boss room exit
 	}
-    if(spawned[1] === true && enemies['model'].length == 0 && spawned[2] === false && trapWalls[2].position.y === 45/2 - 1 && suzanne.position.z == -687){
+    if(spawned[1] === true && enemies['model'].length == 0 && spawned[2] === false && trapWalls[2].position.y === 45/2 - 1){
         createFirstAid(5, 2.5, 5, 0, 10, -225)
+		if(doorSound.isPlaying)
+            doorSound.stop()
         doorSound.play()
         //light
         scene.remove(lights[0])
@@ -1423,7 +1427,7 @@ function spawnEvent(){
 	if(spawned[2] === true && elevator[0].position.y < 45){
         elevator[0].position.y += 0.5;
 	}
-    if(spawned[2]==true && spawned[6]==false && suzanne.position.z != -687 && suzanne.position.x != 50 && suzanne.position.y == -1){
+    if(spawned[2]==true && spawned[6]==false && suzanne.position.z != -687 && suzanne.position.x != 50){
         suzanne.position.set(50, 12, -687)
     }
     if(spawned[2] === true && elevator[0].position.y == 45 && elevator[0].name != 'done'){
