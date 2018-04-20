@@ -1,0 +1,61 @@
+window.addEventListener( 'keypress', function ( event ) {
+		var key = event.which || event.keyCode;
+        if(key == 73 || key == 105){
+            palm2.rotation.x += 0.5;
+            palm2.position.z += 0.5;
+            palm2.position.y -= 0.75;
+        }
+        
+        else if(key == 74 || key == 106){
+            var y = 0
+            for(var x = 0; x<5; x+=1){
+                fingers[y].rotation.x += 0.5;
+                fingers[y].position.z += 0.5;
+                fingers[y].position.y -= 0.5;
+                y+=3;
+            }
+            console.log('finger 0 :', fingers[0].rotation.x)
+            console.log('finger 1 :', fingers[1].position.z)
+            console.log('finger 2 :', fingers[2].position.y)
+        }
+        else if(key == 75 || key == 107){
+            var y = 1
+            for(var x = 0; x<5; x+=1){
+                fingers[y].rotation.x += 0.5;
+                fingers[y].position.z += 0.5;
+                fingers[y].position.y -= 0.5;
+                y+=3;
+            }
+        }
+        else if(key == 76 || key == 108){
+            var y = 2
+            for(var x = 0; x<5; x+=1){
+                fingers[y].rotation.x += 0.5;
+                fingers[y].position.z += 0.5;
+                fingers[y].position.y -= 0.5;
+                y+=3;
+            }
+        }
+        else if(key == 77 || key == 109){
+           palm1.rotation.z += 0.5; 
+           palm1.position.z += 0.5; 
+        }
+	}, false );
+
+
+window.addEventListener( 'keypress', function ( event ) {
+		var key = event.which || event.keyCode;
+        if(key == 73 || key == 105){
+            //flexHand()
+            suzanne.position.y += 25
+            console.log(suzanne.position)
+        }
+        if(key == 79 || key == 111){
+            suzanne.position.z -= 25
+            console.log(suzanne.position)
+        }
+        if(key == 80 || key == 112){
+            suzanne.position.x += 25
+            console.log(suzanne.position)
+        }
+	}, false );

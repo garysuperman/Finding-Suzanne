@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>Non</title>
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+			}
+			body {
+				background-color: #ffffff;
+				margin: 0;
+				overflow: hidden;
+				font-family: arial;
+			}
+			#blocker {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+			}
+			
+			#hud {
+				color: #ffffff;
+				bottom: 10px;
+				position: absolute;
+				right: 10px;
+				z-index: 100;
+				font-size:20px;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+			}
+            
+            #bossHealth {
+				color: #ff0000;
+				top: 10px;
+				position: absolute;
+				right: 25px;
+				z-index: 100;
+				font-size:30px;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+			}
+			
+			#instructions {
+				width: 100%;
+				height: 100%;
+				display: -webkit-box;
+				display: -moz-box;
+				display: box;
+				-webkit-box-orient: horizontal;
+				-moz-box-orient: horizontal;
+				box-orient: horizontal;
+				-webkit-box-pack: center;
+				-moz-box-pack: center;
+				box-pack: center;
+				-webkit-box-align: center;
+				-moz-box-align: center;
+				box-align: center;
+				color: #ffffff;
+				text-align: center;
+				cursor: pointer;
+			}
+			#hurt {
+			  background-color: red;
+			  display: none;
+			  left: 0;
+			  opacity: 0.15;
+			  pointer-events: none;
+			  position: absolute;
+			  top: 0;
+			  z-index: 1002;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script src="js/PointerLockControls.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
+		<div id="blocker">
+			<div id="instructions">
+				<span style="font-size:40px">Find the Golden Suzanne!</span>
+				<br/>
+				Click to play<br>
+				(W, A, S, D = Move, SPACE = Jump, MOUSE = Look around, Left-Click = Shoot, R = reload, F = chainsaw)
+			</div>
+		</div>
+		<script src ="js/main.js"></script>
+	</body>
+</html>
