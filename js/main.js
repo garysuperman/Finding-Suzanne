@@ -1405,7 +1405,7 @@ function spawnEvent(){
 		trapWalls[2].position.y -= 0.5; //lava room entrance
         //trapWalls[3].position.y -= 0.5; //boss room exit
 	}
-    if(spawned[1] === true && enemies['model'].length == 0 && spawned[2] === false && trapWalls[2].position.y === 45/2 - 1 && suzanne.position.y == 12){
+    if(spawned[1] === true && enemies['model'].length == 0 && spawned[2] === false && trapWalls[2].position.y === 45/2 - 1 && suzanne.position.z == -687){
         createFirstAid(5, 2.5, 5, 0, 10, -225)
         doorSound.play()
         //light
@@ -1423,7 +1423,7 @@ function spawnEvent(){
 	if(spawned[2] === true && elevator[0].position.y < 45){
         elevator[0].position.y += 0.5;
 	}
-    if(spawned[2]==true && spawned[6]==false && suzanne.position.z != -687 && suzanne.position.x != 50){
+    if(spawned[2]==true && spawned[6]==false && suzanne.position.z != -687 && suzanne.position.x != 50 && suzanne.position.y == -1){
         suzanne.position.set(50, 12, -687)
     }
     if(spawned[2] === true && elevator[0].position.y == 45 && elevator[0].name != 'done'){
